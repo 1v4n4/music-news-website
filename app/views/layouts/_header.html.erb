@@ -1,0 +1,47 @@
+<nav class="container-fluid d-flex justify-content-between">
+  
+    <div>
+        <a class="navbar-brand" href="#"><img src="assets/logo.svg" alt="logo" class="logo ms-5"><p class="logo-txt ms-1 text-dark fw-bold fst-italic text-center">Do - magazine with <br> best music taste</p></a>
+        
+    </div>
+    <div>
+        <ul class="list-group list-group-horizontal mt-4">
+                <li class="nav-item">
+                <a class="list-group-item list-group-item-action text-warning fs-5 fw-bold border-0" aria-current="page" href="#">Cover story</a>
+                </li>
+                <li class="nav-item">
+                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">Interviews</a>
+                </li>
+                <li class="nav-item">
+                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">Reviews</a>
+                </li>
+                <li class="nav-item">
+                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">Festivals</a>
+                </li>
+        </ul>
+    </div>
+    <div>
+        <ul class="list-group list-group-horizontal mt-4">
+        <% if current_user %>
+            <li class="nav-item mt-3 fw-bold me-3">Logged in as: <%= current_user.name %>
+            
+            </li>
+            <li class="nav-item mt-2 me-5">
+                <%= button_to 'Log out', logout_path, method: :delete, controller: :sessions, action: :destroy, class:"fw-bold list-group-item list-group-item-action btn btn-light" %>
+            </li>
+            <% else %>
+                <li class="nav-item">
+                    <%link_to "Log in", login_path, class:"fw-bold list-group-item list-group-item-action btn btn-light" %>
+                </li>
+                <li class="nav-item">
+                <%link_to "Sign up", new_user, class:"fw-bold list-group-item list-group-item-action btn btn-light" %>
+                </li>
+            <%end%>
+        </ul>
+    </div>
+  
+</nav>
+<hr class="line">
