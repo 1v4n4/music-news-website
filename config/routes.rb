@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :votes
   resources :articles
   resources :users
   get    'login',  to: 'sessions#new'
