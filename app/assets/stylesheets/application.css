@@ -17,9 +17,11 @@
  .logo {
      width: 60px;
  }
+
  .logo-txt {
      font-size: 15px;
  }
+
  ul {
      list-style: none;
  }
@@ -36,6 +38,17 @@
      margin-top: 200px;
  }
 
- .texta {
-     height: 250px;
- }
+.torange {
+  color: #FD6000;
+}
+
+.texta {
+  height: 250px;
+}
+
+body {
+    border: 5px solid #4D423C;
+    }
+.bgbrown {
+    background: #4D423C;
+}

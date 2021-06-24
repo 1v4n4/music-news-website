@@ -14,6 +14,7 @@
   </head>
 
   <body>
+  <div class="border">
   <%= render 'layouts/header'%>
   <div class="alerts">   
       <% if notice %>
@@ -24,5 +25,7 @@
       <% end %>
     </div>
     <%= yield %>
+    <%#<%= render 'layouts/footer'%>
+    </div>
   </body>
 </html>
