@@ -17,7 +17,7 @@
   </div>
     <div class="field">
     <%= form.label :category %>
-  <%= form.select :category, Category.pluck(:name, :id) %>
+  <%= form.collection_select :category_id, Category.all, :id, :name %> 
   </div>
 
   <div class="actions">
