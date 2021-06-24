@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
   before_action :set_vote, only: %i[ show edit update destroy ]
+  before_action :authorize
 
   # GET /votes or /votes.json
   def index
@@ -21,11 +22,16 @@ class VotesController < ApplicationController
 
   # POST /votes or /votes.json
   def create
-    @vote = Vote.new(vote_params)
+    @article =Article.find(params[:article_id])
+    if Vote.where(article_id: @article.id, user_id: current_user.id).exists?
+      redirect_to articles_path, notice: "User is allowed to vote once. You already voted for this article"
+      return
+    end
+    @vote = current_user.votes.new(article_id: @article.id)
 
     respond_to do |format|
       if @vote.save
-        format.html { redirect_to @vote, notice: "Vote was successfully created." }
+        format.html { redirect_to @article, notice: "Your vote is recorded!" }
         format.json { render :show, status: :created, location: @vote }
       else
         format.html { render :new, status: :unprocessable_entity }
