@@ -1,3 +1,5 @@
+<div class="mt-5">
+
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -12,11 +14,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    
+    <%= form.text_field :name, class:"form-control my-2", placeholder:"Name"  %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= submit_tag "Sign up", class:"fw-bold list-group-item text-center list-group-item-action btn btn-light" %>
   </div>
 <% end %>
+
+

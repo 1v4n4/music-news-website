@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         redirect_to root_path, notice: "Logged in!"
       else
-        flash.now.alert = "Userame is invalid"
+        flash.now.alert = "Name is not valid"
         render "new"
       end
     end

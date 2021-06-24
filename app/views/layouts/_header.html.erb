@@ -1,8 +1,9 @@
 <nav class="container-fluid d-flex justify-content-between">
   
     <div>
-        <a class="navbar-brand" href="#"><img src="assets/logo.svg" alt="logo" class="logo ms-5"><p class="logo-txt ms-1 text-dark fw-bold fst-italic text-center">Do - magazine with <br> best music taste</p></a>
-        
+        <%= link_to root_path, class:"navbar-brand link" do %>
+        <img src="assets/logo.svg" alt="logo" class="logo ms-5"><p class="logo-txt ms-1 text-dark fw-bold fst-italic text-center">Do - magazine with <br> best music taste</p>
+        <%end%>
     </div>
     <div>
         <ul class="list-group list-group-horizontal mt-4">
@@ -46,3 +47,4 @@
   
 </nav>
 <hr class="line">
+<br>
