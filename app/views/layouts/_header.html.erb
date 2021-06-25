@@ -2,25 +2,25 @@
   
     <div>
         <%= link_to root_path, class:"navbar-brand link" do %>
-        <img src="assets/logo.svg" alt="logo" class="logo ms-5"><p class="logo-txt ms-1 text-dark fw-bold fst-italic text-center">Do - magazine with <br> best music taste</p>
+        <%= image_tag "logo.svg", class:"logo ms-5"%><p class="logo-txt ms-1 text-dark fw-bold fst-italic text-center">Do - magazine with <br> best music taste</p>
         <%end%>
     </div>
     <div>
         <ul class="list-group list-group-horizontal mt-4">
                 <li class="nav-item">
-                <a class="list-group-item list-group-item-action torange fs-5 fw-bold border-0" aria-current="page" href="#">Cover story</a>
+                    <%= link_to "Cover story", category_path(1), class:"list-group-item list-group-item-action torange fs-5 fw-bold border-0"%>
                 </li>
                 <li class="nav-item">
-                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">News</a>
+                    <%= link_to "News", category_path(2), class:"list-group-item list-group-item-action fs-5 fw-bold border-0"%>
                 </li>
                 <li class="nav-item">
-                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">Interviews</a>
+                	<%= link_to "Interviews", category_path(3), class:"list-group-item list-group-item-action fs-5 fw-bold border-0"%>
                 </li>
                 <li class="nav-item">
-                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">Reviews</a>
+                  <%= link_to "Live", category_path(4), class:"list-group-item list-group-item-action fs-5 fw-bold border-0"%>
                 </li>
                 <li class="nav-item">
-                <a class="list-group-item list-group-item-action fs-5 fw-bold border-0" aria-current="page" href="#">Festivals</a>
+                	<%= link_to "Reviews", category_path(5), class:"list-group-item list-group-item-action fs-5 fw-bold border-0"%>
                 </li>
         </ul>
     </div>
@@ -37,7 +37,7 @@
                 <li class="nav-item">
                     <%= link_to "Log in", login_path, class:"fw-bold list-group-item border-0 list-group-item-action btn btn-light" %>
                 </li>
-                <li class="nav-item"><p class="fs-4  mt-2 me-1"> | </p></li>
+                <li class="nav-item"><p class="fs-4  mt-1 me-1"> | </p></li>
                 <li class="nav-item">
                 <%= link_to "Sign up", new_user_path, class:"fw-bold list-group-item border-0 list-group-item-action btn btn-light" %>
                 </li>

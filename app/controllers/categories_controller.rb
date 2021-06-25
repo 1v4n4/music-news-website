@@ -4,10 +4,13 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.all
+    
   end
 
   # GET /categories/1 or /categories/1.json
   def show
+    @category = Category.find(params[:id])
+    @cover = Article.where(category_id: 1).newest_first
   end
 
   # GET /categories/new

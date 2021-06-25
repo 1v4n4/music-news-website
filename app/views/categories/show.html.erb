@@ -10,5 +10,16 @@
   <%= @category.priority %>
 </p>
 
+<%
+=begin%>
+ <% @articles.each do |art|%>
+  <%= art.title %>
+  <img src="<%art.image%>">
+  <% art.user.name %>
+  <% art.created_at %>
+  <%end%> 
+<%
+=end%>
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

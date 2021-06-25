@@ -5,6 +5,7 @@ class VotesController < ApplicationController
   # GET /votes or /votes.json
   def index
     @votes = Vote.all
+    
   end
 
   # GET /votes/1 or /votes/1.json

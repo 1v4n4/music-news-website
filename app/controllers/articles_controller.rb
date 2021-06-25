@@ -4,11 +4,25 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.all.newest_first
+    @toparticle = Article.first
+    @topcover = Article.where(category_id: 1).newest_first.first
+    @topnews = Article.where(category_id: 2).newest_first.first
+    @topinterviews = Article.where(category_id: 3).newest_first.first
+    @toplive = Article.where(category_id: 4).newest_first.first
+    @topreview = Article.where(category_id: 5).newest_first.first
+    #@maxvotes = Vote.group[:article_id].count
+    #cover = Vote.group("article_id").count
+    #@maxvotes = Article.votes.count    
   end
 
   # GET /articles/1 or /articles/1.json
   def show
+    @cover = Article.where(category_id: 1).newest_first.limit(4)
+    @news = Article.where(category_id: 2).newest_first.limit(4)
+    @interviews = Article.where(category_id: 3).newest_first.limit(4)
+    @live = Article.where(category_id: 4).newest_first.limit(4)
+    @review =Article.where(category_id: 5).newest_first.limit(4)
   end
 
   # GET /articles/new

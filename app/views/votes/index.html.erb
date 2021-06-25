@@ -11,7 +11,9 @@
 
   <tbody>
     <% @votes.each do |vote| %>
+    
       <tr>
+      <td><%= vote.article_id %></td>
         <td><%= link_to 'Show', vote %></td>
         <td><%= link_to 'Edit', edit_vote_path(vote) %></td>
         <td><%= link_to 'Destroy', vote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -21,5 +23,5 @@
 </table>
 
 <br>
-
+<p><%= @maxvotes %>ej</p>
 <%= link_to 'New Vote', new_vote_path %>

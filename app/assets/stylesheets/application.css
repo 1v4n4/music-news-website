@@ -46,21 +46,22 @@
   height: 250px;
 }
 
-body {
+html {
+	min-height: 100%;
     border: 5px solid #4D423C;
     }
+
 .bgbrown {
     background: #4D423C;
 }
 
-
-
-/* html {
-	position: relative;
-}
-body {
-	position: absolute;
-	height:100%;
-	top: 0;
+.footer {
+	position: fixed;
 	bottom: 0;
-} */
+	min-width: 100%;
+}
+
+.continer {
+    height: 90%;
+}
+

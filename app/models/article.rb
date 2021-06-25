@@ -7,4 +7,6 @@ class Article < ApplicationRecord
     validates :text, presence: true
     validates :image, presence: true
 
+    scope :newest_first, -> { order(created_at: :desc) }    
+
 end

@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9 position-relative">
+			<div class= "position-absolute">
+				<img src="<%= @toparticle.image %>" class="my-4 article-img img-fluid" alt="first article pic">
+			</div>
+			<div class= "position-absolute">
+				<%= @toparticle.category.name %>
+			</div>
+			<div class= "position-absolute">
+				<%= @toparticle.title %>
+			</div>
+		
+		
+			
+    <div class="col-3 position-relative">
+	
+			<div class= "position-absolute">
+					<img src="<%= @topcover.image %>" class="my-4 article-img img-fluid" >
+				</div>
+				<div class= "position-absolute">
+					<%= @topcover.category.name %>
+				</div>
+				<div class= "position-absolute">
+					<%= @topcover.title %>
+				</div>
+			</div>
+  	</div>
+  <div class="row">
+    <div class="col position-relative">
+			<div class= "position-absolute">
+				<img src="<% @topnews.image %>" class="my-4 article-img img-fluid" >
+			</div>
+			<div class= "position-absolute">
+				<%= @topnews.category.name %>
+			</div>
+			<div class= "position-absolute">
+				<%= @topnews.title %>
+			</div>		
+		</div>
+
+    <div class="col position-relative">
+			<div class= "position-absolute">
+				<img src="<% @topinterviews.image %>" class="my-4 article-img img-fluid">
+			</div>
+			<div class= "position-absolute">
+				<%= @topinterviews.category.name %>
+			</div>
+			<div class= "position-absolute">
+				<%= @topinterviews.title %>
+			</div>	
+		</div>
+    <div class="col position-relative">
+			<div class= "position-absolute">
+				<img src="<% @toplive.image %>" class="my-4 article-img img-fluid">
+			</div>
+			<div class= "position-absolute">
+				<%= @toplive.category.name %>
+			</div>
+			<div class= "position-absolute">
+				<%= @toplive.title %>
+			</div>	
+		</div>
+    <div class="col position-relative">
+				<img src="<% @topreview.image %>" class="my-4 article-img img-fluid">
+			</div>
+			<div class= "position-absolute">
+				<%= @topreview.category.name %>
+			</div>
+			<div class= "position-absolute">
+				<%= @topreview.title %>
+			</div>	
+		</div>
+		</div>
+  </div>
+  
+</div>
