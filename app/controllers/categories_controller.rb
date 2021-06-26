@@ -4,13 +4,19 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.all
+    @articles = Article.all.newest_first
+    @top = Vote.most_popular.includes(:article).first #.includes(:article)
+    @topcover = Article.where(category_id: 1).newest_first.first
+    @topnews = Article.where(category_id: 2).newest_first.first
+    @topinterviews = Article.where(category_id: 3).newest_first.first
+    @toplive = Article.where(category_id: 4).newest_first.first
+    @topreview = Article.where(category_id: 5).newest_first.first
     
   end
 
   # GET /categories/1 or /categories/1.json
   def show
-    @category = Category.find(params[:id])
-    @cover = Article.where(category_id: 1).newest_first
+    @category = Category.find(params[:id])    
   end
 
   # GET /categories/new

@@ -1,19 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
  .logo {
      width: 60px;
  }
@@ -30,10 +14,6 @@
     text-decoration: none;
  }
 
- .line {
-     margin-top: -30px;
- }
-
  .mt {
      margin-top: 200px;
  }
@@ -46,22 +26,100 @@
   height: 250px;
 }
 
+.header {
+	height: 105px;
+	border-bottom: 3px solid #4D423C;
+}
+
+footer {
+	height: 80px;
+}
+
+body, {
+	min-height: 100%;	  
+}
+
 html {
 	min-height: 100%;
-    border: 5px solid #4D423C;
-    }
+  border: 10px solid #4D423C;  
+}
+
+
+.yi {
+    height: 100%;
+}
 
 .bgbrown {
     background: #4D423C;
 }
 
-.footer {
-	position: fixed;
+.fixed {
+	position:fixed;
 	bottom: 0;
-	min-width: 100%;
+	width: 100%;
 }
 
-.continer {
-    height: 90%;
+
+.row1 {
+	height: 38vh;	
+} 
+
+.prelative {
+position: relative;
 }
 
+.pabsolute {
+	position: absolute;
+}
+
+.title {
+	bottom: 20px;
+	left: 20px;
+	z-index: 5;
+	font-size: 20px;
+	text-shadow: -2px -2px 0 #000;
+}
+
+.category {
+	top: 20px;
+	left: 20px;
+	z-index: 5;
+	font-size: 20px;	
+	line-height: 25px;
+	padding: 5px;
+}
+
+.a {
+	background:yellow;
+}
+.b {
+	background: red;
+}
+.c {
+	background: green;
+}
+.d {
+	background:blue;
+}
+.e {
+	background:orange;
+}
+.f {
+	background:pink;
+}
+
+.grid-img {
+	object-fit: cover;
+	z-index: 1;
+	height: 38vh;
+	width: 100%;
+}
+
+.sticky {
+	position:sticky;
+	bottom: 0;
+}
+
+.wrapper {
+	min-height: 75vh;
+}

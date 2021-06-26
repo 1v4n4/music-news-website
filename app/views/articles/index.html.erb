@@ -1,1 +1,29 @@
-<%= render 'articles' %>
+<div class= "wrapper mx-5">
+  <h1 class="text-center my-5">All articles</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>      
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+        <td><%= article.title %></td>
+        <td><%= article.user.name %></td> 
+        <td ><%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => article.id, class:"btn btn-light" %>
+          <td><%= link_to 'Show', article, class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
+          <% if article.user_id == current_user.id %>
+            <td><%= link_to 'Edit', edit_article_path(article), class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
+            <td><%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
+          <% end %>
+      <% end %>
+      </tr>    
+    </tbody>
+  </table>
+</div>
+<div class="sticky">
+  <%= render 'layouts/footer' %>
+</div>

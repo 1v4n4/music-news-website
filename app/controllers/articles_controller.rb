@@ -2,21 +2,11 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
   before_action :authorize, except: [:index, :show]
 
-  # GET /articles or /articles.json
   def index
     @articles = Article.all.newest_first
-    @toparticle = Article.first
-    @topcover = Article.where(category_id: 1).newest_first.first
-    @topnews = Article.where(category_id: 2).newest_first.first
-    @topinterviews = Article.where(category_id: 3).newest_first.first
-    @toplive = Article.where(category_id: 4).newest_first.first
-    @topreview = Article.where(category_id: 5).newest_first.first
-    #@maxvotes = Vote.group[:article_id].count
-    #cover = Vote.group("article_id").count
-    #@maxvotes = Article.votes.count    
+       
   end
 
-  # GET /articles/1 or /articles/1.json
   def show
     @cover = Article.where(category_id: 1).newest_first.limit(4)
     @news = Article.where(category_id: 2).newest_first.limit(4)
@@ -25,16 +15,13 @@ class ArticlesController < ApplicationController
     @review =Article.where(category_id: 5).newest_first.limit(4)
   end
 
-  # GET /articles/new
   def new
     @article = current_user.articles.build
   end
 
-  # GET /articles/1/edit
   def edit
   end
 
-  # POST /articles or /articles.json
   def create
     @article = current_user.articles.build(article_params)
 
@@ -49,7 +36,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /articles/1 or /articles/1.json
   def update
     respond_to do |format|
       if @article.update(article_params)
@@ -62,7 +48,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # DELETE /articles/1 or /articles/1.json
   def destroy
     @article.destroy
     respond_to do |format|
