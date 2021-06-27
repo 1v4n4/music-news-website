@@ -9,7 +9,7 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
-
+# rubocop: disable Metrics/BlockLength
 ActiveRecord::Schema.define(version: 20_210_623_153_943) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
@@ -48,3 +48,4 @@ ActiveRecord::Schema.define(version: 20_210_623_153_943) do
     t.index ['user_id'], name: 'index_votes_on_user_id'
   end
 end
+# rubocop: enable Metrics/BlockLength

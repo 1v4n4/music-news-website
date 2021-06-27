@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  
   it 'should have many articles' do
     t = Category.reflect_on_association(:articles)
     expect(t.macro).to eq(:has_many)

@@ -30,6 +30,4 @@ RSpec.describe User, type: :model do
       expect(User.new(name: 'hey').valid?).to be true
     end
   end
-
-
 end

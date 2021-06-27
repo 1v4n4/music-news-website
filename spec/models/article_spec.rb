@@ -14,6 +14,5 @@ RSpec.describe Article, type: :model do
   it 'should have many votes' do
     t = Article.reflect_on_association(:votes)
     expect(t.macro).to eq(:has_many)
-  end  
-  
+  end
 end

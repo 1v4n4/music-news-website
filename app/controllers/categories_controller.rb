@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   def index
     @articles = Article.all.newest_first
-    @top = Vote.most_popular.includes(:article).first 
+    @top = Vote.most_popular.includes(:article).first
     @topcover = Article.where(category_id: 1).newest_first.first
     @topnews = Article.where(category_id: 2).newest_first.first
     @topinterviews = Article.where(category_id: 3).newest_first.first
@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])    
+    @category = Category.find(params[:id])
     @selection = Article.where(category_id: @category.id).includes([:user]).newest_first.limit(4)
   end
 

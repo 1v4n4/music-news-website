@@ -19,99 +19,97 @@ li {
 }
 
 .torange {
-  color: #FD6000;
+  color: #fd6000;
 }
-
 
 .texta {
   height: 250px;
 }
 
 .header {
-	height: 105px;
-	border-bottom: 3px solid #4D423C;
+  height: 105px;
+  border-bottom: 3px solid #4d423c;
 }
 
 footer {
-	height: 80px;
+  height: 80px;
 }
 
 body, {
-	min-height: 100%;	  
+  min-height: 100%;
 }
 
 html {
-	min-height: 100%;
-  border: 10px solid #4D423C;  
+  min-height: 100%;
+  border: 10px solid #4d423c;
 }
-
 
 .yi {
   height: 100%;
 }
 
 .bgbrown {
-  background: #4D423C;
+  background: #4d423c;
 }
 
 .fixed {
-	position:fixed;
-	bottom: 0;
-	width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .fixed1 {
-	position:fixed;
-	top: 0;
+  position: fixed;
+  top: 0;
 }
 
 .row1 {
-	height: 38vh;	
-} 
+  height: 38vh;
+}
 
 .prelative {
-	position: relative;
+  position: relative;
 }
 
 .pabsolute {
-	position: absolute;
+  position: absolute;
 }
 
 .title {
-	bottom: 20px;
-	left: 20px;
-	z-index: 5;
-	font-size: 20px;
-	text-shadow: -2px -2px 0 #000;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+  font-size: 20px;
+  text-shadow: -2px -2px 0 #000;
 }
 
 .category {
-	top: 20px;
-	left: 20px;
-	z-index: 5;
-	font-size: 20px;	
-	line-height: 25px;
-	padding: 5px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 5px;
 }
 
-.category1 {	
-	font-size: 20px;	
-	line-height: 25px;
-	text-decoration: underline;	
+.category1 {
+  font-size: 20px;
+  line-height: 25px;
+  text-decoration: underline;
 }
 
 .grid-img {
-	object-fit: cover;
-	z-index: 1;
-	height: 38vh;
-	width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  height: 38vh;
+  width: 100%;
 }
 
 .sticky {
-	position:sticky;
-	bottom: 0;
+  position: sticky;
+  bottom: 0;
 }
 
 .wrapper {
-	min-height: 75vh;
+  min-height: 75vh;
 }
