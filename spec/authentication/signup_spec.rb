@@ -3,15 +3,6 @@ require 'rails_helper'
 describe 'User signs up', type: :system do
   let(:name) { 'johndoe' }
 
-  it 'signs up user with valid name' do
-    visit new_user_path
-    fill_in 'Name', with: name
-    click_button 'Sign up'
-
-    expect(page).to have_text 'User was successfully created.'
-    
-  end
-
   it "doesn't sign up user if name already exists" do
     visit new_user_path
     @user = User.create(name: 'johndoe')
