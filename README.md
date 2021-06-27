@@ -4,6 +4,7 @@
 There are six articles on a homepage, the most popular one (the article which users voted the most), and five latest articles from all categories.
 Each category page has four the most recent articles, along with their images, titles (truncated if needed), author's name, preview of text, the number of votes, and a Read more link.
 If logged in, the user can vote for articles from this and few other pages. Visitors can vore only once for each article, but it is not forbidden to support their own creations.
+Authors can edit and delete their articles, but not other people's.
 
 ## Live demo
 
@@ -18,10 +19,6 @@ If logged in, the user can vote for articles from this and few other pages. Visi
 - Bootstrap
 - CSS
 - HTML
-
-### Gems needed
-
-- Rails Rspec
 
 ## Getting Started
 ### To get a local copy run the following steps:
@@ -39,8 +36,13 @@ If logged in, the user can vote for articles from this and few other pages. Visi
 - Run `rails server` to open the local server
 - You can folow the nav links to create user account, to add articles or vote 
 
-## Rspec
+## Gems needed
+
+- Rails Rspec
 To run the tests, run `rspec` command in root folder.
+
+- CarrierWave
+ For uploading pictures run `gem install carrierwave` and `rails generate uploader`.
 
 ## Ruby Linter
 Run `rubocop`

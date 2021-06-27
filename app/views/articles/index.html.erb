@@ -5,14 +5,16 @@
     <thead>
       <tr>
         <th scope="col">Title</th>
-        <th scope="col">Author</th>      
+        <th scope="col">Author</th> 
+        <th scope="col">Category</th>     
       </tr>
     </thead>
     <tbody>
       <% @articles.each do |article| %>
         <tr>
         <td><%= article.title %></td>
-        <td><%= article.user.name %></td> 
+        <td><%= article.user.name %></td>
+        <td><%= article.category.name %></td> 
         <td ><%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => article.id, class:"btn btn-light" %>
           <td><%= link_to 'Show', article, class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
           <% if article.user == current_user %>

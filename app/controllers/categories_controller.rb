@@ -2,9 +2,8 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
 
   def index
-    @categories = Category.all
     @articles = Article.all.newest_first
-    @top = Vote.most_popular.includes(:article).first # .includes(:article)
+    @top = Vote.most_popular.includes(:article).first 
     @topcover = Article.where(category_id: 1).newest_first.first
     @topnews = Article.where(category_id: 2).newest_first.first
     @topinterviews = Article.where(category_id: 3).newest_first.first
