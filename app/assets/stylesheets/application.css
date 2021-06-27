@@ -1,22 +1,22 @@
- .logo {
-     width: 60px;
- }
+.logo {
+  width: 60px;
+}
 
- .logo-txt {
-     font-size: 15px;
- }
+.logo-txt {
+  font-size: 15px;
+}
 
- ul {
-     list-style: none;
- }
+ul {
+  list-style: none;
+}
 
- li {
-    text-decoration: none;
- }
+li {
+  text-decoration: none;
+}
 
- .mt {
-     margin-top: 200px;
- }
+.mt {
+  margin-top: 200px;
+}
 
 .torange {
   color: #FD6000;
@@ -47,11 +47,11 @@ html {
 
 
 .yi {
-    height: 100%;
+  height: 100%;
 }
 
 .bgbrown {
-    background: #4D423C;
+  background: #4D423C;
 }
 
 .fixed {
@@ -60,13 +60,17 @@ html {
 	width: 100%;
 }
 
+.fixed1 {
+	position:fixed;
+	top: 0;
+}
 
 .row1 {
 	height: 38vh;	
 } 
 
 .prelative {
-position: relative;
+	position: relative;
 }
 
 .pabsolute {
@@ -96,12 +100,6 @@ position: relative;
 	text-decoration: underline;	
 }
 
-.preview {
-	text-overflow: ellipsis;
-overflow: hidden;
-line-clamp: 3;
-}
-
 .grid-img {
 	object-fit: cover;
 	z-index: 1;
@@ -117,4 +115,3 @@ line-clamp: 3;
 .wrapper {
 	min-height: 75vh;
 }
-

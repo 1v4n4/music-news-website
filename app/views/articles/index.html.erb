@@ -15,7 +15,7 @@
         <td><%= article.user.name %></td> 
         <td ><%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => article.id, class:"btn btn-light" %>
           <td><%= link_to 'Show', article, class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
-          <% if article.user_id == current_user.id %>
+          <% if article.user == current_user %>
             <td><%= link_to 'Edit', edit_article_path(article), class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
             <td><%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
           <% end %>

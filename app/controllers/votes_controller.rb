@@ -2,23 +2,18 @@ class VotesController < ApplicationController
   before_action :set_vote, only: %i[show edit update destroy]
   before_action :authorize
 
-  # GET /votes or /votes.json
   def index
     @votes = Vote.all
   end
 
-  # GET /votes/1 or /votes/1.json
   def show; end
 
-  # GET /votes/new
   def new
     @vote = Vote.new
   end
 
-  # GET /votes/1/edit
   def edit; end
 
-  # POST /votes or /votes.json
   def create
     @article = Article.find(params[:article_id])
     if Vote.where(article_id: @article.id, user_id: current_user.id).exists?
@@ -38,7 +33,6 @@ class VotesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /votes/1 or /votes/1.json
   def update
     respond_to do |format|
       if @vote.update(vote_params)
@@ -51,7 +45,6 @@ class VotesController < ApplicationController
     end
   end
 
-  # DELETE /votes/1 or /votes/1.json
   def destroy
     @vote.destroy
     respond_to do |format|
@@ -62,12 +55,10 @@ class VotesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_vote
     @vote = Vote.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def vote_params
     params.fetch(:vote, {})
   end
