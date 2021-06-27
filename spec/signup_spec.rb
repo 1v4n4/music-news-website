@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'User signs up', type: :system do
   let(:name) { 'johndoe' }
-  
+
   it 'signs up user with valid name' do
     visit new_user_path
     fill_in 'Name', with: name
@@ -24,7 +24,7 @@ describe 'User signs up', type: :system do
   it "doesn't sign up user with invalid name" do
     visit new_user_path
     fill_in 'Name', with: 'No'
-    
+
     click_button 'Create User'
 
     expect(page).to have_text 'Name is too short (minimum is 3 characters)'

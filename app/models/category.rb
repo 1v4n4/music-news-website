@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-    has_many :articles, foreign_key: 'caregory_id'
+  has_many :articles, foreign_key: 'caregory_id'
 end

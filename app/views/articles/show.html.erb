@@ -13,7 +13,7 @@
   <p class="">Created at: <%= @article.created_at%>
   </p>
 
-  <p class="">Votes: <%= @article.votes.count%>
+  <p class="">Votes: <%= @article.votes.count%></p>
 
   <div class="my-4">
     <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => @article.id, class:"btn btn-light" %>

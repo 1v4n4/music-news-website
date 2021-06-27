@@ -22,6 +22,7 @@
   color: #FD6000;
 }
 
+
 .texta {
   height: 250px;
 }
@@ -89,23 +90,16 @@ position: relative;
 	padding: 5px;
 }
 
-.a {
-	background:yellow;
+.category1 {	
+	font-size: 20px;	
+	line-height: 25px;
+	text-decoration: underline;	
 }
-.b {
-	background: red;
-}
-.c {
-	background: green;
-}
-.d {
-	background:blue;
-}
-.e {
-	background:orange;
-}
-.f {
-	background:pink;
+
+.preview {
+	text-overflow: ellipsis;
+overflow: hidden;
+line-clamp: 3;
 }
 
 .grid-img {
@@ -123,3 +117,4 @@ position: relative;
 .wrapper {
 	min-height: 75vh;
 }
+

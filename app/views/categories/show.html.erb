@@ -1,16 +1,55 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @category.priority %>
-</p>
-
-
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="d-flex">
+  
+  <div class="d-flex col-12 flex-wrap"">
+  <% @selection.each_with_index do |select, index|%>
+    <% if index == 0 || index == 1%>
+      <div class="d-flex col-6">
+        <div class="col-6">
+          <%=image_tag select.image.url, alt: "article image", class:"grid-img" %>
+        </div>
+        <div class="col-6  p-3">
+          <p class="torange category1 fw-bold">
+            <%= @category.name %>
+          </p>
+          <h3 class="fw-bold">
+            <%= truncate(select.title, :length => 14)%>
+          </h3>
+          <p>Author: <span class="torange fw-bold"><%=select.user.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
+          <p class="preview">
+            <%= truncate(select.text, :length => 60) %>
+          </p>
+          <%= link_to 'Read more', select, class:"fw-bold text-dark more" %>
+          <div class="mt-2">
+            <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => select.id %>
+          </div>
+        </div>
+      </div>
+    <%else%>
+      <div class="d-flex col-6">
+        <div class="col-6  p-3">
+          <p class="torange category1 fw-bold">
+            <%= @category.name %>
+          </p>
+          <h3 class="fw-bold">
+            <%= truncate(select.title, :length => 14)%>
+          </h3>
+          <p>Author: <%=select.user.name %> | Votes: <%= select.votes.count%></p>
+           <p class="preview overflow-hidden">
+            <%= truncate(select.text, :length => 60) %>
+          </p>
+          <%= link_to 'Read more', select, class:"fw-bold text-dark" %>
+          <div class="mt-2">
+            <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => select.id, class:"btn btn-light" %>
+          </div>
+        </div>
+        <div class="col-6">
+          <%=image_tag select.image.url , alt: "article image", class:"grid-img" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+<div class="fixed" >
+  <%= render 'layouts/footer'%>
+</div>
