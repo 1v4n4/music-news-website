@@ -1,53 +1,55 @@
 
-<div class="d-flex"> 
-  <div class="col-9 row1 prelative">
-    <%= image_tag @top.article.image.url, alt: "most voted article image", class:"grid-img" %>
-    <%= link_to @top.article do |link| %>
-    <p class= "pabsolute torange  fw-bold title"><%= @top.article.title %></p>
-    <% end %>
-    <%#<p class= "pabsolute category bgbrown torange fw-bold">Most popular</p> %>
-        <p class= "pabsolute torange bgbrown category fw-bold"><%= @top.article.category.name %></p>
-  </div>
-  <div class="col-3 row1 prelative">
-    <%= image_tag @topcover.image.url, alt: "latest cover story image", class:"grid-img" %>
-    <%= link_to @topcover do |link| %>
-      <p class= "pabsolute torange  fw-bold title"><%= @topcover.title %></p>
+<div class="bgbrown">
+  <div class="d-flex"> 
+    <div class="col-9 row1 prelative">
+      <%= image_tag @top.article.image.url, alt: "most voted article image", class:"grid-img" %>
+      <%= link_to @top.article do |link| %>
+      <p class= "pabsolute torange  fw-bold title"><%= @top.article.title %></p>
       <% end %>
-      <p class= "pabsolute torange bgbrown category fw-bold"><%= @topcover.category.name %></p>
+      <%#<p class= "pabsolute category bgbrown torange fw-bold">Most popular</p> %>
+          <p class= "pabsolute torange bgbrown category fw-bold"><%= @top.article.category.name %></p>
+    </div>
+    <div class="col-3 row1 prelative">
+      <%= image_tag @topcover.image.url, alt: "latest cover story image", class:"grid-img" %>
+      <%= link_to @topcover do |link| %>
+        <p class= "pabsolute torange  fw-bold title"><%= @topcover.title %></p>
+        <% end %>
+        <p class= "pabsolute torange bgbrown category fw-bold"><%= @topcover.category.name %></p>
+    </div>
   </div>
-</div>
-<div class="d-flex prelative"> 
-  <div class="col-3 row1">
-    <%= image_tag @topnews.image.url, alt: "latest news image", class:"grid-img" %>
-    <%= link_to @topnews do |link| %>
-    <p class= "pabsolute torange  fw-bold title"><%= @topnews.title %></p>
-    <% end %>
-    <p class= "pabsolute torange bgbrown category fw-bold"><%= @topnews.category.name %></p>
-  
+  <div class="d-flex prelative"> 
+    <div class="col-3 row1">
+      <%= image_tag @topnews.image.url, alt: "latest news image", class:"grid-img" %>
+      <%= link_to @topnews do |link| %>
+      <p class= "pabsolute torange  fw-bold title"><%= @topnews.title %></p>
+      <% end %>
+      <p class= "pabsolute torange bgbrown category fw-bold"><%= @topnews.category.name %></p>
+    
+    </div>
+    <div class="col-3 row1 prelative">
+      <%= image_tag @topinterviews.image.url, alt: "latest interview article image", class:"grid-img" %>
+      <%= link_to @topinterviews do |link| %>
+      <p class= "pabsolute torange  fw-bold title"><%= @topinterviews.title %></p>
+      <% end %>
+      <p class= "pabsolute torange bgbrown category fw-bold"><%= @topinterviews.category.name %></p>
+    </div>
+    <div class="col-3 row1 prelative">
+      <%= image_tag @toplive.image.url, alt: "latest live article image", class:"grid-img" %>
+      <%= link_to @toplive do |link| %>
+      <p class= "pabsolute torange  fw-bold title"><%= @toplive.title %></p>
+      <% end %>
+      <p class= "pabsolute torange bgbrown category fw-bold"><%= @toplive.category.name %></p>
+    </div>
+    <div class="col-3 row1 prelative">
+      <%= image_tag @topreview.image.url, alt:"latest interview article image", class:"grid-img" %>
+      <%= link_to @topreview do |link| %>
+      <p class= "pabsolute torange  fw-bold title"><%= @topreview.title %></p>
+      <% end %>
+      <p class= "pabsolute torange bgbrown category fw-bold"><%= @topreview.category.name %></p>
+    </div>  
   </div>
-  <div class="col-3 row1 prelative">
-    <%= image_tag @topinterviews.image.url, alt: "latest interview article image", class:"grid-img" %>
-    <%= link_to @topinterviews do |link| %>
-    <p class= "pabsolute torange  fw-bold title"><%= @topinterviews.title %></p>
-     <% end %>
-    <p class= "pabsolute torange bgbrown category fw-bold"><%= @topinterviews.category.name %></p>
-  </div>
-  <div class="col-3 row1 prelative">
-    <%= image_tag @toplive.image.url, alt: "latest live article image", class:"grid-img" %>
-    <%= link_to @toplive do |link| %>
-    <p class= "pabsolute torange  fw-bold title"><%= @toplive.title %></p>
-    <% end %>
-    <p class= "pabsolute torange bgbrown category fw-bold"><%= @toplive.category.name %></p>
-  </div>
-  <div class="col-3 row1 prelative">
-    <%= image_tag @topreview.image.url, alt:"latest interview article image", class:"grid-img" %>
-    <%= link_to @topreview do |link| %>
-    <p class= "pabsolute torange  fw-bold title"><%= @topreview.title %></p>
-    <% end %>
-    <p class= "pabsolute torange bgbrown category fw-bold"><%= @topreview.category.name %></p>
-  </div>  
-</div>
 
-<div class="fixed" >
-    <%= render 'layouts/footer'%>
-</div>
+  <div class="fixed" >
+      <%= render 'layouts/footer'%>
+  </div>
+  </div>
