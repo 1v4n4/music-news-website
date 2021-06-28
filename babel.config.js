@@ -59,6 +59,7 @@ module.exports = function(api) {
           helpers: false
         }
       ],
+      ['@babel/plugin-proposal-private-methods', { 'loose': true }],
       [
         '@babel/plugin-transform-regenerator',
         {
