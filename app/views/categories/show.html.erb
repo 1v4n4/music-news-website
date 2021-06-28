@@ -12,7 +12,7 @@
             <%= @category.name %>
           </p>
           <h3 class="fw-bold">
-            <%= truncate(select.title, :length => 14)%>
+            <%= truncate(select.title, :length => 20)%>
           </h3>
           <p>Author: <span class="torange fw-bold"><%=select.user.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
           <p class="preview">
@@ -31,9 +31,9 @@
             <%= @category.name %>
           </p>
           <h3 class="fw-bold">
-            <%= truncate(select.title, :length => 14)%>
+            <%= truncate(select.title, :length => 20)%>
           </h3>
-          <p>Author: <%=select.user.name %> | Votes: <%= select.votes.count%></p>
+         <p>Author: <span class="torange fw-bold"><%=select.user.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
            <p class="preview overflow-hidden">
             <%= truncate(select.text, :length => 60) %>
           </p>

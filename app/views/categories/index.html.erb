@@ -5,8 +5,8 @@
     <%= link_to @top.article do |link| %>
     <p class= "pabsolute torange  fw-bold title"><%= @top.article.title %></p>
     <% end %>
-    <p class= "pabsolute category bgbrown torange fw-bold">Most popular</p>
-
+    <%#<p class= "pabsolute category bgbrown torange fw-bold">Most popular</p> %>
+        <p class= "pabsolute torange bgbrown category fw-bold"><%= @top.article.category.name %></p>
   </div>
   <div class="col-3 row1 prelative">
     <%= image_tag @topcover.image.url, alt: "latest cover story image", class:"grid-img" %>
