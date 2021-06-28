@@ -1,14 +1,14 @@
 <div class="bgbrown">  
   <div class="d-flex">
     
-    <div class="d-flex col-12 flex-wrap bg-light"">
+    <div class="d-flex row1 col-12 flex-wrap bg-light"">
     <% @selection.each_with_index do |select, index|%>
       <% if index == 0 || index == 1%>
         <div class="d-flex col-6">
           <div class="col-6">
             <%=image_tag select.image.url, alt: "article image", class:"grid-img" %>
           </div>
-          <div class="col-6  p-3">
+          <div class="col-6  row1 p-3">
             <p class="torange category1 fw-bold">
               <%= @category.name %>
             </p>
@@ -26,7 +26,7 @@
           </div>
         </div>
       <%else%>
-        <div class="d-flex col-6">
+        <div class="d-flex row1 col-6">
           <div class="col-6  p-3">
             <p class="torange category1 fw-bold">
               <%= @category.name %>
