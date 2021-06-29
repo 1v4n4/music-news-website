@@ -2,8 +2,8 @@
 
 "Do" is a music news website with a homepage for highlighted articles, five category pages (Cover story, News, Interviews, Live, Reviews), and a few others.
 There are six articles on a homepage, the most popular one (the article which users voted the most), and five latest articles from all categories.
-Each category page has four the most recent articles, along with their images, titles (truncated if needed), author's name, preview of text, the number of votes, and a Read more link.
-If logged in, the user can vote for articles from this and few other pages. Visitors can vore only once for each article, but it is not forbidden to support their own creations.
+Each category page has four of the most recent articles, along with their images, titles (truncated if needed), author's name, a preview of text, the number of votes, and a Read more link.
+If logged in, the user can vote for articles from this and few other pages. Visitors can vore only once for each article, but it is not forbidden to support their creations.
 Authors can edit and delete their articles, but not other people's.
 ![Screenshot1](https://user-images.githubusercontent.com/65791349/123562058-8c1d2880-d7ac-11eb-883e-4f0228e46630.png)
 ![Screenshot3](https://user-images.githubusercontent.com/65791349/123602255-d926ec00-d7f8-11eb-9072-80d6698e2984.png)
@@ -30,19 +30,19 @@ Authors can edit and delete their articles, but not other people's.
 - Open your terminal or command line
 - Run `git clone` and Paste the link
 - Open the folder with your code editor
-- Run `bundle install` to install all dependecies
+- Run `bundle install` to install all dependencies
 - Run `yarn install` to install yarn
 - Run `rails webpacker:install`
 - Run `rails db:create` to create the database tables
 - Run `rails db:migrate` to migrate the database
-- Run `rails db:seed` to seed the database with its default values
+- Run `rails db:seed` to seed the database with default values for article's categories
 - Run `rails server` to open the local server
-- You can folow the nav links to create user account, to add articles or vote 
+- You can follow the nav links to create a user account, to add articles, or vote 
 
 ## Gems needed
 
 - Rails Rspec
-To run the tests, run `rspec` command in root folder.
+To run the tests, run `rspec` command in the root folder.
 
 - CarrierWave
  For uploading pictures run `gem install carrierwave` and `rails generate uploader`.
@@ -68,8 +68,8 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/1v4n4/music-news-website/issues).
 
 ## Acknowledgments
-Design of this project is based on idea by [Nelson Sakwa](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
-Sample articles and pictures are taken from websites NME, Kerrang!, Guardian, Rolling Stone, Spin and Loudwire.
+The design of this project is based on an idea by [Nelson Sakwa](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+Sample articles and pictures are taken from websites NME, Kerrang!, Guardian, Rolling Stone, Spin, and Loudwire.
 
 ## License
 MIT
