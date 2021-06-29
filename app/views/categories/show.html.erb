@@ -15,7 +15,7 @@
             <h3 class="fw-bold my-3 fs-5">
               <%= truncate(select.title, :length => 50)%>
             </h3>
-            <p>Author: <span class="torange fw-bold"><%=select.user.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
+            <p>Author: <span class="torange fw-bold"><%=select.author.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
             <p class="preview my-2">
               <%= truncate(select.text, :length => 120) %>
             </p>
@@ -34,7 +34,7 @@
             <h3 class="fw-bold fs-5 my-3">
               <%= truncate(select.title, :length => 50)%>
             </h3>
-          <p>Author: <span class="torange fw-bold"><%=select.user.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
+          <p>Author: <span class="torange fw-bold"><%=select.author.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
             <p class="preview my-2">
               <%= truncate(select.text, :length => 150) %>
             </p>

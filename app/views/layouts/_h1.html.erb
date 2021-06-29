@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center pt-4">
+  <p class="nav-item fw-bold pt-2">Logged in as: 
+    <%= current_user.name %>
+  </p>
+  <p class="nav-item pt-1 mx-3">
+    <%= link_to 'Create new article', new_article_path, class:"fw-bold list-group-item border-0 list-group-item-action btn btn-light" %>
+  </p>
+  <p class="nav-item">
+    <%= button_to 'Log out', logout_path, method: :delete, controller: :sessions, action: :destroy, class:"fw-bold list-group-item list-group-item-action btn btn-light" %>
+  </p>
+</div>

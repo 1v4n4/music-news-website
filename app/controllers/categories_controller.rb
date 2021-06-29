@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @selection = Article.where(category_id: @category.id).includes([:user]).newest_first.limit(4)
+    @selection = Article.where(category_id: @category.id).includes([:author]).newest_first.limit(4)
   end
 
   def new
