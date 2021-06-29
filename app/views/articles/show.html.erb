@@ -1,7 +1,7 @@
 <div class="col-5 m-auto"> 
 <h1 class="text-center fs-3 fw-bold mt-5"><%= @article.title %></h1>
-
-  <div class=" mx-auto col-6">
+<p class="fw-bold text-center mt-4">Author: <%= @article.author.name %></p>
+  <div class=" mx-auto col-8">
     
     <img src="<%= @article.image %>" class="my-4 article-img img-fluid" >
   </div>
@@ -10,16 +10,16 @@
     <%= @article.text %>
   </p>
 
-  <p class="">Created at: <%= @article.created_at%>
+  <p class="fw-bold mt-4">Created at: <%= @article.created_at%>
   </p>
 
-  <p class="">Votes: <%= @article.votes.count%></p>
+  <p class="fw-bold mt-4">Votes: <%= @article.votes.count%></p>
 
   <div class="my-4">
     <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => @article.id, class:"btn btn-light" %>
   </div>
   <div class="d-flex justify-content-center gap-3 mt-4">
-    <% if current_user == @article.user %>
+    <% if current_user == @article.author %>
       <div>
           <%= link_to 'Edit', edit_article_path(@article), class:"col-3 fw-bold list-group-item list-group-item-action btn btn-light border-0" %> 
       </div>

@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :authorize, except: %i[index show]
 
   def index
-    @articles = Article.all.newest_first.includes(%i[user category])
+    @articles = Article.all.newest_first.includes(%i[author category])
   end
 
   def show
