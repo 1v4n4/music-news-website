@@ -6,7 +6,7 @@
         <%end%>
     </div>
     <div>
-        <ul class="list-group list-group-horizontal mt-4">
+        <ul class="list-group list-group-horizontal mt-4 pt-2">
                 <li class="nav-item">
                     <%= link_to "Cover story", category_path(1), class:"list-group-item list-group-item-action torange fs-5 fw-bold border-0"%>
                 </li>
@@ -28,24 +28,24 @@
         </ul>
     </div>
     <div>
-        <ul class="list-group list-group-horizontal mt-4">
+        <ul class="list-group list-group-horizontal">
         <% if current_user %>
-            <li class="nav-item mt-3 fw-bold me-2">Logged in as: <%= current_user.name %>
+            <li class="nav-item fw-bold mt-5 pt-1 me-2">Logged in as: <%= current_user.name %>
             
             </li>
             
-            <li class="nav-item mt-2 me-2">
-                <%= link_to 'Create new article', new_article_path, class:"fw-bold list-group-item border-0 list-group-item-action btn btn-light" %>
+            <li class="nav-item  me-2">
+                <%= link_to 'Create new article', new_article_path, class:"fw-bold list-group-item border-0 list-group-item-action btn btn-light pt-5" %>
             </li>
-            <li class="nav-item mt-2 me-2">
+            <li class="nav-item mt-4 pt-3 me-2">
                 <%= button_to 'Log out', logout_path, method: :delete, controller: :sessions, action: :destroy, class:"fw-bold list-group-item list-group-item-action btn btn-light" %>
             </li>
             <% else %>
-                <li class="nav-item">
+                <li class="nav-item pt-2 mt-4">
                     <%= link_to "Log in", login_path, class:"fw-bold list-group-item border-0 list-group-item-action btn btn-light" %>
                 </li>
-                <li class="nav-item"><p class="fs-4  mt-1 me-1"> | </p></li>
-                <li class="nav-item">
+                <li class="nav-item"><p class="fs-4 pt-3 mt-4 me-1"> | </p></li>
+                <li class="nav-item pt-2 mt-4">
                 <%= link_to "Sign up", new_user_path, class:"fw-bold list-group-item border-0 list-group-item-action btn btn-light" %>
                 </li>
             <%end%>

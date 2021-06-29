@@ -3,7 +3,7 @@ class Article < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :votes
-  validates :title, presence: true, length: { minimum: 5, maximum: 80 }
+  validates :title, presence: true, length: { minimum: 5, maximum: 80, message: "Title must be between 5 and 80 characters" }
   validates :text, presence: true
   validates :image, presence: true
 

@@ -1,115 +1,15 @@
-.logo {
-  width: 60px;
-}
-
-.logo-txt {
-  font-size: 15px;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  text-decoration: none;
-}
-
-.mt {
-  margin-top: 200px;
-}
-
-.torange {
-  color: #fd6000;
-}
-
-.texta {
-  height: 250px;
-}
-
-.header {
-  height: 105px;
-  border-bottom: 3px solid #4d423c;
-}
-
-footer {
-  height: 80px;
-}
-
-body, {
-  min-height: 100%;
-}
-
-html {
-  min-height: 100%;
-  border: 10px solid #4d423c;
-}
-
-.yi {
-  height: 100%;
-}
-
-.bgbrown {
-  background: #4d423c;
-}
-
-.fixed {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.fixed1 {
-  position: fixed;
-  top: 0;
-}
-
-.row1 {
-  height: 38vh;
-}
-
-.prelative {
-  position: relative;
-}
-
-.pabsolute {
-  position: absolute;
-}
-
-.title {
-  bottom: 20px;
-  left: 20px;
-  z-index: 5;
-  font-size: 20px;
-  text-shadow: -2px -2px 0 #000;
-}
-
-.category {
-  top: 20px;
-  left: 20px;
-  z-index: 5;
-  font-size: 20px;
-  line-height: 25px;
-  padding: 5px;
-}
-
-.category1 {
-  font-size: 20px;
-  line-height: 25px;
-  text-decoration: underline;
-}
-
-.grid-img {
-  object-fit: cover;
-  z-index: 1;
-  height: 38vh;
-  width: 100%;
-}
-
-.sticky {
-  position: sticky;
-  bottom: 0;
-}
-
-.wrapper {
-  min-height: 76vh;
-}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

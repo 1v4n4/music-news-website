@@ -4,16 +4,17 @@
   <div class="field my-3">
     <%= form.text_field :title, class:"form-control my-2", placeholder:"Title" %>
   </div>
-
+  <p class="text-danger"><%= title_error.join(', ') %></p>
   <div class="field my-4">
     
     <%= form.text_area :text, class:"form-control my-2 texta", placeholder:"Text" %>
   </div>
-
+   <p class="text-danger"><%= text_error.join(', ') %></p>
   <div class="field my-3">
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
+   <p class="text-danger"><%= image_error.join(', ') %></p>
     <div class="field my-3">
     <%= form.label :category %>
     <%= form.collection_select :category_id, Category.all, :id, :name %>  
@@ -25,4 +26,6 @@
     </div>
 <% end %>
 
+  
+  
 

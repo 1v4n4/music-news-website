@@ -12,15 +12,15 @@
             <p class="torange category1 fw-bold">
               <%= @category.name %>
             </p>
-            <h3 class="fw-bold">
-              <%= truncate(select.title, :length => 20)%>
+            <h3 class="fw-bold my-3 fs-5">
+              <%= truncate(select.title, :length => 50)%>
             </h3>
             <p>Author: <span class="torange fw-bold"><%=select.user.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
-            <p class="preview">
+            <p class="preview my-2">
               <%= truncate(select.text, :length => 120) %>
             </p>
             <%= link_to 'Read more', select, class:"fw-bold text-dark more" %>
-            <div class="mt-2">
+            <div class="mt-4">
               <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => select.id %>
             </div>
           </div>
@@ -31,15 +31,15 @@
             <p class="torange category1 fw-bold">
               <%= @category.name %>
             </p>
-            <h3 class="fw-bold">
-              <%= truncate(select.title, :length => 20)%>
+            <h3 class="fw-bold fs-5 my-3">
+              <%= truncate(select.title, :length => 50)%>
             </h3>
           <p>Author: <span class="torange fw-bold"><%=select.user.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
-            <p class="preview overflow-hidden">
-              <%= truncate(select.text, :length => 120) %>
+            <p class="preview my-2">
+              <%= truncate(select.text, :length => 150) %>
             </p>
             <%= link_to 'Read more', select, class:"fw-bold text-dark" %>
-            <div class="mt-2">
+            <div class="mt-4">
               <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => select.id, class:"btn btn-light" %>
             </div>
           </div>

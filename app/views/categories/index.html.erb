@@ -17,8 +17,8 @@
         <p class= "pabsolute torange bgbrown category fw-bold"><%= @topcover.category.name %></p>
     </div>
   </div>
-  <div class="d-flex prelative"> 
-    <div class="col-3 row1">
+  <div class="d-flex"> 
+    <div class="col-3 prelative row1">
       <%= image_tag @topnews.image.url, alt: "latest news image", class:"grid-img" %>
       <%= link_to @topnews do |link| %>
       <p class= "pabsolute torange  fw-bold title"><%= @topnews.title %></p>

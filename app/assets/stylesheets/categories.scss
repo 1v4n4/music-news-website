@@ -1,3 +1,47 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.fixed1 {
+  position: fixed;
+  top: 0;
+}
+
+.row1 {
+  height: 38vh;
+}
+
+.title {
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+  font-size: 20px;
+  text-shadow: -2px -2px 0 #000;
+}
+
+.category {
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 5px;
+}
+
+.category1 {
+  font-size: 20px;
+  line-height: 25px;
+  text-decoration: underline;
+}
+
+.grid-img {
+  object-fit: cover;
+  z-index: 1;
+  height: 38vh;
+  width: 100%;
+}
+
+.wrapper {
+  min-height: 76vh;
+}
