@@ -1,6 +1,6 @@
 <div class="col-5 m-auto"> 
 <h1 class="text-center fs-3 fw-bold mt-5"><%= @article.title %></h1>
-<p class="fw-bold text-center mt-4">Author: <%= @article.author.name %></p>
+<p class="fw-bold text-center mt-4">Author: <%= @article.author.name %>  | Category: <%= @article.category.name %> </p>
   <div class=" mx-auto col-8">
     
     <img src="<%= @article.image %>" class="my-4 article-img img-fluid" >
