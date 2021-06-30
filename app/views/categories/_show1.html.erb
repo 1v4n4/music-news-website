@@ -6,11 +6,11 @@
             <p class="torange category1 fw-bold">
               <%= @category.name %>
             </p>
-            <h3 class="fw-bold my-3 fs-5">
+            <h3 class="fw-bold my-3 fs-5t">
               <%= title_preview(select) %>...
             </h3>
             <p>Author: <span class="torange fw-bold"><%=select.author.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
-            <p class="preview my-2">
+            <p class="preview my-2 ptext">
              <%= text_preview(select) %>...
             </p>
             <%= link_to 'Read more', select, class:"fw-bold text-dark more" %>
