@@ -61,7 +61,7 @@ Run `npx stylelint "**/*.scss"`
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/1v4n4/)
 
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
