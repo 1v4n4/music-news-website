@@ -1,0 +1,16 @@
+<div class="mt-5">
+
+<%= form_with(model: user) do |form| %>
+  
+
+  <div class="field">
+    
+    <%= form.text_field :name, class:"form-control my-2", placeholder:"Name"  %>
+  </div>
+<p class="text-danger"><%= name_error.join(', ') %></p>
+  <div class="actions">
+    <%= submit_tag "Sign up", class:"fw-bold list-group-item text-center list-group-item-action btn btn-light" %>
+  </div>
+<% end %>
+
+

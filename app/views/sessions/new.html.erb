@@ -1,0 +1,17 @@
+<div class="col-3 m-auto mt-5 wrapper"> 
+ 
+  <h1 class="text-center my-5">Log In</h1>
+
+<%= form_tag login_path do %>
+  <div class="field my-3">
+   
+    <%= text_field_tag :name, params[:name], class:"form-control my-2", placeholder:"Name" %>
+  </div>
+   <div class="actions"><%= submit_tag "Log In", class:"fw-bold list-group-item text-center list-group-item-action btn btn-light" %></div>
+<% end %>  
+
+
+</div>
+<div class="sticky">
+  <%= render 'layouts/footer' %>
+</div>

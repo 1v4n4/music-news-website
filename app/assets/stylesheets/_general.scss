@@ -1,0 +1,78 @@
+
+/* Header */
+
+.logo {
+  width: 60px;
+}
+
+.logo-txt {
+  font-size: 15px;
+}
+
+.header {
+  height: 13vh;
+  border-bottom: 3px solid #4d423c;
+}
+
+/* footer */
+footer {
+  height: 11vh;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 0;
+}
+
+/* General stuff */
+.prelative {
+  position: relative;
+}
+
+.pabsolute {
+  position: absolute;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+.bgbrown {
+  background: #4d423c;
+}
+
+.torange {
+  color: #fd6000;
+}
+
+.mt {
+  margin-top: 200px;
+}
+
+body {
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  min-height: 100%;
+  border: 10px solid #4d423c;
+}
+
+.yi {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 76vh;
+}

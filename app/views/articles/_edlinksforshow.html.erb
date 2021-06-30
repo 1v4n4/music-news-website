@@ -1,0 +1,10 @@
+<div>
+  <%= link_to 'Edit', edit_article_path(@article), class:"col-3 fw-bold list-group-item list-group-item-action btn btn-light border-0" %> 
+</div>
+<div class="mt-2">  |
+</div>
+<div>
+  <%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' }, class:"col-3 fw-bold list-group-item list-group-item-action btn btn-light border-0" %>
+</div>
+  <div class="mt-2">  |
+</div>
