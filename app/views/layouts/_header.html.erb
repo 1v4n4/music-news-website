@@ -1,5 +1,5 @@
 <nav class="header container-fluid d-flex justify-content-between">
-  
+
     <div>
         <%= link_to root_path, class:"navbar-brand link" do %>
         <%= image_tag "logo.svg", class:"logo ms-5"%><p class="logo-txt ms-1 text-dark fw-bold fst-italic text-center">Do - magazine with <br> great music taste</p>
@@ -8,7 +8,7 @@
     <div>
         <ul class="list-group list-group-horizontal mt-4 pt-2">
                 <li class="nav-item">
-                    <%= link_to "Cover story", category_path(1), class:"list-group-item list-group-item-action torange fs-5 fw-bold border-0"%>
+                    <%= link_to "Cover story", category_path(1), class:"list-group-item  list-group-item-action torange fs-5 fw-bold border-0"%>
                 </li>
                 <li class="nav-item">
                     <%= link_to "News", category_path(2), class:"list-group-item list-group-item-action fs-5 fw-bold border-0"%>
@@ -28,11 +28,11 @@
         </ul>
     </div>
     <div>
-        
+
         <%= render log %>
-        
-            
-        
+
+
+
     </div>
-  
+
 </nav>
