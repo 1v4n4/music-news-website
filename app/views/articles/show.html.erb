@@ -1,0 +1,31 @@
+<div class="col-5 m-auto"> 
+<h1 class="text-center fs-3 fw-bold mt-5"><%= @article.title %></h1>
+<p class="fw-bold text-center mt-4">Author: <%= @article.author.name %>  | Category: <%= @article.category.name %> </p>
+  <div class=" mx-auto col-8">
+    
+    <img src="<%= @article.image %>" class="my-4 article-img img-fluid" >
+  </div>
+
+  <p class="">
+    <%= @article.text %>
+  </p>
+
+  <p class="fw-bold mt-4">Exists: <%= time_ago_in_words @article.created_at%>
+  </p>
+
+  <p class="fw-bold mt-4">Votes: <%= @article.votes.count%></p>
+
+  <div class="my-4">
+    <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => @article.id, class:"btn btn-light" %>
+  </div>
+  <div class="d-flex justify-content-center gap-3 mt-4">
+    <%= ed_links_show(@article) %>
+    <div>
+      <%= link_to 'Back', articles_path,class:"col-3 fw-bold list-group-item list-group-item-action btn btn-light border-0" %>
+    </div>                
+  
+  </div>
+</div>
+<div class="sticky">
+    <%= render 'layouts/footer' %>
+</div>

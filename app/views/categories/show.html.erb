@@ -1,0 +1,13 @@
+<div class="bgbrown">  
+  <div class="d-flex">
+    
+    <div class="d-flex row1 col-12 flex-wrap bg-light"">
+    <% @selection.each_with_index do |select, index|%>
+      <%= indexes(index, select) %>
+    <% end %>
+    </div>
+  </div>
+  <div class="fixed" >
+    <%= render 'layouts/footer'%>
+  </div>
+  </div>
