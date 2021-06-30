@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :categories, only: [:show]
-  resources :votes, only: [:create, :destroy]
+  resources :votes, only: %i[create destroy]
   resources :articles
-  resources :users, only: [:new, :create]
+  resources :users, only: %i[new create]
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create', as: 'login_path'
   delete 'logout', to: 'sessions#destroy'

@@ -1,22 +1,17 @@
 module ApplicationHelper
-
   def log
-    if current_user 
+    if current_user
       'layouts/h1'
-    else 
+    else
       'layouts/h2'
     end
   end
 
   def alertss(alert)
-    if alert
-    render 'layouts/alerts'
-    end
+    render 'layouts/alerts' if alert
   end
 
   def noticess(notice)
-    if notice 
-      render 'layouts/notices'
-    end
+    render 'layouts/notices' if notice
   end
 end

@@ -1,4 +1,5 @@
 module ArticlesHelper
+  # rubocop: disable Lint/Void
   def title_error
     @article.errors.full_messages_for(:title).each do |msg|
       msg
@@ -18,15 +19,11 @@ module ArticlesHelper
   end
 
   def ed_links(article)
-    if article.author == current_user
-      render 'articles/editdelete', :article => article
-    end
+    render 'articles/editdelete', article: article if article.author == current_user
   end
 
   def ed_links_show(article)
-    if article.author == current_user
-      render 'articles/edlinksforshow', :article => article
-    end
+    render 'articles/edlinksforshow', article: article if article.author == current_user
   end
-
 end
+# rubocop: enable Lint/Void
