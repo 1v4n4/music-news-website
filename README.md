@@ -10,7 +10,7 @@ Authors can edit and delete their articles, but not other people's.
 ![screenshot2](https://user-images.githubusercontent.com/65791349/123602284-de843680-d7f8-11eb-96ee-bd32d81693ad.png)
 
 ## Live demo
-[Do on Heroku](https://safe-everglades-26711.herokuapp.com/)
+[Do on Heroku](https://glacial-spire-65889.herokuapp.com)
 
 ## Built With
 
@@ -37,7 +37,7 @@ Authors can edit and delete their articles, but not other people's.
 - Run `rails db:migrate` to migrate the database
 - Run `rails db:seed` to seed the database with default values for article's categories
 - Run `rails server` to open the local server
-- You can follow the nav links to create a user account, to add articles, or vote 
+- You can follow the nav links to create a user account, to add articles, or vote
 
 ## Gems needed
 
@@ -54,7 +54,7 @@ Run `rubocop`
 Run `npx stylelint "**/*.scss"`
 
 ## Author
-👤 **Ivana Novaković-Leković** 
+👤 **Ivana Novaković-Leković**
 
 - GitHub: [@githubhandle](https://github.com/1v4n4)
 - Twitter: [@twitterhandle](https://twitter.com/codeIv1)
