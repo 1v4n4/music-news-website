@@ -14,7 +14,7 @@ module CategoriesHelper
   end
 
   def title_preview(article)
-    article.title[0...50]
+    article.title[0...40]
   end
 
   def indexes(index, select)
