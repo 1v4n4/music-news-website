@@ -1,12 +1,12 @@
-<div class="d-flex col-6">
+<div class="d-flex row1 col-6">
           <div class="col-6">
             <%=image_tag select.image.url, alt: "article image", class:"grid-img" %>
           </div>
-          <div class="col-6  row1 p-3">
+          <div class="col-6   p-3">
             <p class="torange category1 fw-bold">
               <%= @category.name %>
             </p>
-            <h3 class="fw-bold my-3 fs-5t">
+            <h3 class="fw-bold my-3 fs-5">
               <%= title_preview(select) %>...
             </h3>
             <p>Author: <span class="torange fw-bold"><%=select.author.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
