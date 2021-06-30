@@ -13,16 +13,13 @@
     <tbody>
       <% @articles.each do |article| %>
         <tr>
-        <td><%= article.title %></td>
+        <td><%= link_to article.title, article, class:"list-group-item border-0 list-group-item-action btn btn-light text-decoration-underline" %></td>
         <td><%= article.author.name %></td>
         <td><%= article.category.name %></td> 
         <td><%= article.created_at %></td> 
         <td ><%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => article.id, class:"btn btn-light" %>
-          <td><%= link_to 'Show', article, class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
-          <% if article.author == current_user %>
-            <td><%= link_to 'Edit', edit_article_path(article), class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
-            <td><%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, class:"list-group-item border-0 list-group-item-action btn btn-light" %></td>
-          <% end %>
+          
+        <%= ed_links(article)%>
       <% end %>
       </tr>    
     </tbody>

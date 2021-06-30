@@ -18,12 +18,8 @@
   <%= render 'layouts/header'%> 
   <div class="yield">
   <div class="alerts fixed1">   
-      <% if notice %>
-        <%= render 'layouts/notices' %>
-      <% end %>
-      <% if alert %>
-        <%= render 'layouts/alerts' %>
-      <% end %>
+      <%= alertss(alert) %>
+      <%= noticess(notice) %>
     </div>
    <div class="yi">
     <%= yield %>

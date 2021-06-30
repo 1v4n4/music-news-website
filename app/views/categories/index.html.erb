@@ -3,21 +3,12 @@
   <div class="d-flex"> 
     <div class="col-9 row1 prelative">
       <% @top.each do |top|%>
-        <%= image_tag top.article.image.url, alt: "most voted article image", class:"grid-img" %>
-        <%= link_to top.article do |link| %>
-          <p class= "pabsolute torange  fw-bold title"><%= top.article.title %></p>
-        <% end %>      
-        <%#<p class= "pabsolute category bgbrown torange fw-bold">Most popular</p> %>
-        <p class= "pabsolute torange bgbrown category fw-bold"><%= top.article.category.name %></p>
+         <%= render 'categories/mainstory', :top => top%>
       <%end%>
     </div>
     <div class="col-3 row1 prelative">
       <% @topcover.each do |top|%>
-        <%= image_tag top.image.url, alt: "latest cover story image", class:"grid-img" %>
-        <%= link_to top do |link| %>
-          <p class= "pabsolute torange  fw-bold title"><%= top.title %></p>
-        <% end %>
-        <p class= "pabsolute torange bgbrown category fw-bold"><%= top.category.name %></p>
+        <%= render 'categories/homepagepartial', :top => top%>        
       <%end%>
     </div>    
   </div>
@@ -25,38 +16,22 @@
   <div class="d-flex"> 
     <div class="col-3 prelative row1">
       <% @topnews.each do |top|%>
-        <%= image_tag top.image.url, alt: "latest news image", class:"grid-img" %>
-        <%= link_to top do |link| %>
-          <p class= "pabsolute torange  fw-bold title"><%= top.title %></p>
-        <% end %>
-        <p class= "pabsolute torange bgbrown category fw-bold"><%= top.category.name %></p>
+        <%= render 'categories/homepagepartial', :top => top%>
       <% end %>
     </div>
     <div class="col-3 row1 prelative">
       <% @topinterviews.each do |top|%>
-        <%= image_tag top.image.url, alt: "latest interview article image", class:"grid-img" %>
-        <%= link_to top do |link| %>
-          <p class= "pabsolute torange  fw-bold title"><%= top.title %></p>
-        <% end %>
-        <p class= "pabsolute torange bgbrown category fw-bold"><%= top.category.name %></p>
+        <%= render 'categories/homepagepartial', :top => top%>
       <% end %>
     </div>
     <div class="col-3 row1 prelative">
       <% @toplive.each do |top|%>
-        <%= image_tag top.image.url, alt: "latest live article image", class:"grid-img" %>
-        <%= link_to top do |link| %>
-          <p class= "pabsolute torange  fw-bold title"><%= top.title %></p>
-        <% end %>
-        <p class= "pabsolute torange bgbrown category fw-bold"><%= top.category.name %></p>
+       <%= render 'categories/homepagepartial', :top => top%>
       <% end %>
     </div>
     <div class="col-3 row1 prelative">
       <% @topreview.each do |top|%>
-        <%= image_tag top.image.url, alt:"latest interview article image", class:"grid-img" %>
-        <%= link_to top do |link| %>
-          <p class= "pabsolute torange  fw-bold title"><%= top.title %></p>
-        <% end %>
-      <p class= "pabsolute torange bgbrown category fw-bold"><%= top.category.name %></p>
+        <%= render 'categories/homepagepartial', :top => top%>
       <% end %>
     </div>  
   </div>

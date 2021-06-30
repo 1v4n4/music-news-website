@@ -1,0 +1,6 @@
+<%= image_tag top.article.image.url, alt: "most voted article image", class:"grid-img" %>
+<%= link_to top.article do |link| %>
+  <p class= "pabsolute torange  fw-bold title"><%= top.article.title %></p>
+<% end %>      
+        <%#<p class= "pabsolute category bgbrown torange fw-bold">Most popular</p> %>
+<p class= "pabsolute torange bgbrown category fw-bold"><%= top.article.category.name %></p>

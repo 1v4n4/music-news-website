@@ -16,4 +16,17 @@ module ArticlesHelper
       msg
     end
   end
+
+  def ed_links(article)
+    if article.author == current_user
+      render 'articles/editdelete', :article => article
+    end
+  end
+
+  def ed_links_show(article)
+    if article.author == current_user
+      render 'articles/edlinksforshow', :article => article
+    end
+  end
+
 end

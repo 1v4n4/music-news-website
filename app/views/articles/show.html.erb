@@ -10,7 +10,7 @@
     <%= @article.text %>
   </p>
 
-  <p class="fw-bold mt-4">Created at: <%= @article.created_at%>
+  <p class="fw-bold mt-4">Exists: <%= time_ago_in_words @article.created_at%>
   </p>
 
   <p class="fw-bold mt-4">Votes: <%= @article.votes.count%></p>
@@ -19,18 +19,7 @@
     <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => @article.id, class:"btn btn-light" %>
   </div>
   <div class="d-flex justify-content-center gap-3 mt-4">
-    <% if current_user == @article.author %>
-      <div>
-          <%= link_to 'Edit', edit_article_path(@article), class:"col-3 fw-bold list-group-item list-group-item-action btn btn-light border-0" %> 
-      </div>
-      <div class="mt-2">  |
-      </div>
-      <div>
-        <%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' }, class:"col-3 fw-bold list-group-item list-group-item-action btn btn-light border-0" %>
-      </div>
-      <div class="mt-2">  |
-      </div>
-    <%end%>
+    <%= ed_links_show(@article) %>
     <div>
       <%= link_to 'Back', articles_path,class:"col-3 fw-bold list-group-item list-group-item-action btn btn-light border-0" %>
     </div>                

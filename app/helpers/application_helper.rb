@@ -8,5 +8,15 @@ module ApplicationHelper
     end
   end
 
-  
+  def alertss(alert)
+    if alert
+    render 'layouts/alerts'
+    end
+  end
+
+  def noticess(notice)
+    if notice 
+      render 'layouts/notices'
+    end
+  end
 end

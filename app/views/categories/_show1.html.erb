@@ -4,17 +4,17 @@
           </div>
           <div class="col-6  row1 p-3">
             <p class="torange category1 fw-bold">
-              <%= category.name %>
+              <%= @category.name %>
             </p>
             <h3 class="fw-bold my-3 fs-5">
-              <%= truncate(select.title, :length => 50)%>
+              <%= title_preview(select) %>
             </h3>
             <p>Author: <span class="torange fw-bold"><%=select.author.name %></span> | Votes: <span class="fw-bold torange"><%= select.votes.count%></span></p>
             <p class="preview my-2">
-              <%= truncate(select.text, :length => 120) %>
+             <%= text_preview(select) %>
             </p>
             <%= link_to 'Read more', select, class:"fw-bold text-dark more" %>
-            <div class="mt-4">
+            <div class="mt-3">
               <%= button_to 'Vote', controller: :votes, action: :create, method: :post, :article_id => select.id %>
             </div>
           </div>

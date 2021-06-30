@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  it 'belong to user' do
-    t = Article.reflect_on_association(:user)
+  it 'belong to author(user)' do
+    t = Article.reflect_on_association(:author)
     expect(t.macro).to eq(:belongs_to)
   end
 
